@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 
 //Crear conexion
-const db = new Sequelize('apollodemo', "root", null, {
+const db = new Sequelize('apollodemo', "root", "fpbx$1045%fx", {
 	host: 'localhost',
 	dialect: 'mysql'
 });
@@ -19,4 +19,4 @@ db.sync();
 
 //Exportar Post
 const Post = db.models.post;
-export { Post }
+export { Post };

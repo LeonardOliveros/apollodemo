@@ -1,0 +1,758 @@
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[34mW20161018-15:33:55.705(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-15:33:55.862(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-15:33:55.865(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-15:33:55.865(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-15:33:55.866(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-15:33:55.868(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-15:33:57.383(-4)? (STDERR) [39m[35mUnhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306[39m
+[34mW20161018-15:33:57.386(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:79:20)[39m
+[34mW20161018-15:33:57.386(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-15:33:57.386(-4)? (STDERR) [39m[35m    at Protocol.handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:364:14)[39m
+[34mW20161018-15:33:57.388(-4)? (STDERR) [39m[35m    at Connection._handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/Connection.js:434:18)[39m
+[34mW20161018-15:33:57.389(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-15:33:57.390(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-15:33:57.390(-4)? (STDERR) [39m[35m    at emitErrorNT (net.js:1269:8)[39m
+[34mW20161018-15:33:57.393(-4)? (STDERR) [39m[35m    at nextTickCallbackWith2Args (node.js:442:9)[39m
+[34mW20161018-15:33:57.393(-4)? (STDERR) [39m[35m    at process._tickCallback (node.js:356:17)[39m
+[34mW20161018-15:33:57.394(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:33:57.394(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-15:33:57.394(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-15:33:57.397(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:33:57.397(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-15:33:57.399(-4)? (STDERR) [39m[35m    at [object Object].Model.sync (/root/apollo-demo/node_modules/sequelize/lib/model.js:985:6)[39m
+[34mW20161018-15:33:57.399(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1014:20[39m
+[34mW20161018-15:33:57.399(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:33:57.400(-4)? (STDERR) [39m[35m    at Function.each (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-15:33:57.401(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1013:20[39m
+[34mW20161018-15:33:57.402(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-15:33:57.403(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:33:57.404(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-15:33:57.404(-4)? (STDERR) [39m[35m    at [object Object].Sequelize.sync (/root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1000:6)[39m
+[34mW20161018-15:33:57.406(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.connectors.js (imports/api/connectors.js:18:4)[39m
+[34mW20161018-15:33:57.407(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-15:33:57.410(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-15:33:57.412(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-15:33:57.414(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-15:33:57.414(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-15:33:57.416(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-15:33:57.416(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-15:33:57.418(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-15:33:57.418(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-15:33:57.420(-4)? (STDERR) [39m[35m    at require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-15:33:57.421(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/app/app.js:103:1[39m
+[34mW20161018-15:33:57.421(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:292:10[39m
+[34mW20161018-15:33:57.422(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20161018-15:33:57.422(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20161018-15:33:57.425(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:128:5[39m
+=> Started your app.
+
+=> App running at: https://169.54.28.42/apollo
+=> Server modified -- restarting...
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[34mW20161018-15:44:22.530(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-15:44:22.713(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-15:44:22.713(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-15:44:22.715(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-15:44:22.715(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-15:44:22.716(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-15:44:24.200(-4)? (STDERR) [39m[35mUnhandled rejection SequelizeConnectionError: ER_BAD_DB_ERROR: Unknown database 'apollodemo'[39m
+[34mW20161018-15:44:24.202(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:94:20)[39m
+[34mW20161018-15:44:24.204(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-15:44:24.204(-4)? (STDERR) [39m[35m    at Handshake.ErrorPacket (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Handshake.js:105:8)[39m
+[34mW20161018-15:44:24.204(-4)? (STDERR) [39m[35m    at Protocol._parsePacket (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:280:23)[39m
+[34mW20161018-15:44:24.206(-4)? (STDERR) [39m[35m    at Parser.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Parser.js:74:12)[39m
+[34mW20161018-15:44:24.208(-4)? (STDERR) [39m[35m    at Protocol.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20161018-15:44:24.209(-4)? (STDERR) [39m[35m    at Socket.<anonymous> (/root/apollo-demo/node_modules/mysql/lib/Connection.js:109:28)[39m
+[34mW20161018-15:44:24.209(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-15:44:24.210(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-15:44:24.211(-4)? (STDERR) [39m[35m    at readableAddChunk (_stream_readable.js:153:18)[39m
+[34mW20161018-15:44:24.211(-4)? (STDERR) [39m[35m    at Socket.Readable.push (_stream_readable.js:111:10)[39m
+[34mW20161018-15:44:24.212(-4)? (STDERR) [39m[35m    at TCP.onread (net.js:536:20)[39m
+[34mW20161018-15:44:24.213(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:44:24.213(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-15:44:24.214(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-15:44:24.214(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:44:24.214(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-15:44:24.217(-4)? (STDERR) [39m[35m    at [object Object].Model.sync (/root/apollo-demo/node_modules/sequelize/lib/model.js:985:6)[39m
+[34mW20161018-15:44:24.218(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1014:20[39m
+[34mW20161018-15:44:24.219(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:44:24.221(-4)? (STDERR) [39m[35m    at Function.each (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-15:44:24.222(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1013:20[39m
+[34mW20161018-15:44:24.223(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-15:44:24.223(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-15:44:24.223(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-15:44:24.228(-4)? (STDERR) [39m[35m    at [object Object].Sequelize.sync (/root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1000:6)[39m
+[34mW20161018-15:44:24.229(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.connectors.js (imports/api/connectors.js:18:4)[39m
+[34mW20161018-15:44:24.230(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-15:44:24.230(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-15:44:24.232(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-15:44:24.232(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-15:44:24.234(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-15:44:24.235(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-15:44:24.235(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-15:44:24.236(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-15:44:24.237(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-15:44:24.239(-4)? (STDERR) [39m[35m    at require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-15:44:24.239(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/app/app.js:103:1[39m
+[34mW20161018-15:44:24.240(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:292:10[39m
+[34mW20161018-15:44:24.240(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20161018-15:44:24.242(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20161018-15:44:24.243(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:128:5[39m
+=> Started your app.
+
+=> App running at: https://169.54.28.42/apollo
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[34mW20161018-16:55:45.340(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-16:55:45.517(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-16:55:45.518(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-16:55:45.518(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-16:55:45.522(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-16:55:45.523(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-16:55:47.011(-4)? (STDERR) [39m[35mUnhandled rejection SequelizeConnectionError: ER_BAD_DB_ERROR: Unknown database 'apollodemo'[39m
+[34mW20161018-16:55:47.013(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:94:20)[39m
+[34mW20161018-16:55:47.014(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-16:55:47.015(-4)? (STDERR) [39m[35m    at Handshake.ErrorPacket (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Handshake.js:105:8)[39m
+[34mW20161018-16:55:47.017(-4)? (STDERR) [39m[35m    at Protocol._parsePacket (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:280:23)[39m
+[34mW20161018-16:55:47.017(-4)? (STDERR) [39m[35m    at Parser.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Parser.js:74:12)[39m
+[34mW20161018-16:55:47.018(-4)? (STDERR) [39m[35m    at Protocol.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20161018-16:55:47.018(-4)? (STDERR) [39m[35m    at Socket.<anonymous> (/root/apollo-demo/node_modules/mysql/lib/Connection.js:109:28)[39m
+[34mW20161018-16:55:47.019(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-16:55:47.019(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-16:55:47.020(-4)? (STDERR) [39m[35m    at readableAddChunk (_stream_readable.js:153:18)[39m
+[34mW20161018-16:55:47.023(-4)? (STDERR) [39m[35m    at Socket.Readable.push (_stream_readable.js:111:10)[39m
+[34mW20161018-16:55:47.023(-4)? (STDERR) [39m[35m    at TCP.onread (net.js:536:20)[39m
+[34mW20161018-16:55:47.023(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:55:47.025(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-16:55:47.025(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-16:55:47.025(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:55:47.027(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:55:47.029(-4)? (STDERR) [39m[35m    at [object Object].Model.sync (/root/apollo-demo/node_modules/sequelize/lib/model.js:985:6)[39m
+[34mW20161018-16:55:47.029(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1014:20[39m
+[34mW20161018-16:55:47.031(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:55:47.031(-4)? (STDERR) [39m[35m    at Function.each (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:55:47.032(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1013:20[39m
+[34mW20161018-16:55:47.033(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-16:55:47.034(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:55:47.034(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:55:47.039(-4)? (STDERR) [39m[35m    at [object Object].Sequelize.sync (/root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1000:6)[39m
+[34mW20161018-16:55:47.040(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.connectors.js (imports/api/connectors.js:18:4)[39m
+[34mW20161018-16:55:47.040(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-16:55:47.041(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-16:55:47.043(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-16:55:47.043(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-16:55:47.044(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-16:55:47.044(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-16:55:47.047(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-16:55:47.049(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-16:55:47.050(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-16:55:47.052(-4)? (STDERR) [39m[35m    at require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-16:55:47.052(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/app/app.js:103:1[39m
+[34mW20161018-16:55:47.053(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:292:10[39m
+[34mW20161018-16:55:47.053(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20161018-16:55:47.056(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20161018-16:55:47.056(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:128:5[39m
+=> Started your app.
+
+=> App running at: http://169.54.28.42:3000
+[34mW20161018-16:58:55.171(-4)? (STDERR) [39m[35mGraphQLError: ER_BAD_DB_ERROR: Unknown database 'apollodemo'[39m
+[34mW20161018-16:58:55.173(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:94:20)[39m
+[34mW20161018-16:58:55.173(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-16:58:55.174(-4)? (STDERR) [39m[35m    at Handshake.ErrorPacket (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Handshake.js:105:8)[39m
+[34mW20161018-16:58:55.174(-4)? (STDERR) [39m[35m    at Protocol._parsePacket (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:280:23)[39m
+[34mW20161018-16:58:55.175(-4)? (STDERR) [39m[35m    at Parser.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Parser.js:74:12)[39m
+[34mW20161018-16:58:55.175(-4)? (STDERR) [39m[35m    at Protocol.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20161018-16:58:55.177(-4)? (STDERR) [39m[35m    at Socket.<anonymous> (/root/apollo-demo/node_modules/mysql/lib/Connection.js:109:28)[39m
+[34mW20161018-16:58:55.177(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-16:58:55.179(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-16:58:55.180(-4)? (STDERR) [39m[35m    at readableAddChunk (_stream_readable.js:153:18)[39m
+[34mW20161018-16:58:55.180(-4)? (STDERR) [39m[35m    at Socket.Readable.push (_stream_readable.js:111:10)[39m
+[34mW20161018-16:58:55.181(-4)? (STDERR) [39m[35m    at TCP.onread (net.js:536:20)[39m
+[34mW20161018-16:58:55.181(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-16:58:55.183(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-16:58:55.184(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:58:55.185(-4)? (STDERR) [39m[35m    at [object Object].Model.findAll (/root/apollo-demo/node_modules/sequelize/lib/model.js:1387:6)[39m
+[34mW20161018-16:58:55.186(-4)? (STDERR) [39m[35m    at posts (imports/api/resolvers.js:7:16)[39m
+[34mW20161018-16:58:55.187(-4)? (STDERR) [39m[35m    at resolveOrError (/root/apollo-demo/node_modules/graphql/execution/execute.js:454:12)[39m
+[34mW20161018-16:58:55.188(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:445:16)[39m
+[34mW20161018-16:58:55.189(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-16:58:55.189(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-16:58:55.189(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-16:58:55.190(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-16:58:55.190(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-16:58:55.192(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-16:58:55.192(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-16:58:55.192(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-16:58:55.192(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mW20161018-16:58:55.194(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:58:55.194(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-16:58:55.194(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:58:55.195(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:58:55.195(-4)? (STDERR) [39m[35m    at completeValueWithLocatedError (/root/apollo-demo/node_modules/graphql/execution/execute.js:500:24)[39m
+[34mW20161018-16:58:55.196(-4)? (STDERR) [39m[35m    at completeValueCatchingError (/root/apollo-demo/node_modules/graphql/execution/execute.js:474:21)[39m
+[34mW20161018-16:58:55.197(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:447:10)[39m
+[34mW20161018-16:58:55.197(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-16:58:55.197(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-16:58:55.198(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-16:58:55.198(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-16:58:55.199(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-16:58:55.199(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-16:58:55.199(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-16:58:55.200(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-16:58:55.201(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mI20161018-16:59:41.664(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mW20161018-16:59:41.718(-4)? (STDERR) [39m[35mGraphQLError: ER_NO_SUCH_TABLE: Table 'apollodemo.posts' doesn't exist[39m
+[34mW20161018-16:59:41.719(-4)? (STDERR) [39m[35m    at [object Object].Query.formatError (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:175:14)[39m
+[34mW20161018-16:59:41.719(-4)? (STDERR) [39m[35m    at Query._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:49:21)[39m
+[34mW20161018-16:59:41.721(-4)? (STDERR) [39m[35m    at Query.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-16:59:41.722(-4)? (STDERR) [39m[35m    at Query.ErrorPacket (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Query.js:94:8)[39m
+[34mW20161018-16:59:41.723(-4)? (STDERR) [39m[35m    at Protocol._parsePacket (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:280:23)[39m
+[34mW20161018-16:59:41.724(-4)? (STDERR) [39m[35m    at Parser.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Parser.js:74:12)[39m
+[34mW20161018-16:59:41.724(-4)? (STDERR) [39m[35m    at Protocol.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20161018-16:59:41.726(-4)? (STDERR) [39m[35m    at Socket.<anonymous> (/root/apollo-demo/node_modules/mysql/lib/Connection.js:109:28)[39m
+[34mW20161018-16:59:41.727(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-16:59:41.727(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-16:59:41.728(-4)? (STDERR) [39m[35m    at readableAddChunk (_stream_readable.js:153:18)[39m
+[34mW20161018-16:59:41.728(-4)? (STDERR) [39m[35m    at Socket.Readable.push (_stream_readable.js:111:10)[39m
+[34mW20161018-16:59:41.729(-4)? (STDERR) [39m[35m    at TCP.onread (net.js:536:20)[39m
+[34mW20161018-16:59:41.729(-4)? (STDERR) [39m[35m    at [object Object].Query.run (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:39:17)[39m
+[34mW20161018-16:59:41.729(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:849:20[39m
+[34mW20161018-16:59:41.730(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/retry-as-promised/index.js:40:21[39m
+[34mW20161018-16:59:41.730(-4)? (STDERR) [39m[35m    at retryAsPromised (/root/apollo-demo/node_modules/retry-as-promised/index.js:30:10)[39m
+[34mW20161018-16:59:41.730(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/sequelize.js:848:12)[39m
+[34mW20161018-16:59:41.731(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:59:41.732(-4)? (STDERR) [39m[35m    at [object Object].Model.findAll (/root/apollo-demo/node_modules/sequelize/lib/model.js:1387:6)[39m
+[34mW20161018-16:59:41.732(-4)? (STDERR) [39m[35m    at posts (imports/api/resolvers.js:7:16)[39m
+[34mW20161018-16:59:41.733(-4)? (STDERR) [39m[35m    at resolveOrError (/root/apollo-demo/node_modules/graphql/execution/execute.js:454:12)[39m
+[34mW20161018-16:59:41.734(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:445:16)[39m
+[34mW20161018-16:59:41.734(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-16:59:41.735(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-16:59:41.735(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-16:59:41.736(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-16:59:41.736(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-16:59:41.736(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-16:59:41.737(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-16:59:41.739(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-16:59:41.742(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mW20161018-16:59:41.743(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:59:41.743(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-16:59:41.745(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:59:41.747(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:59:41.751(-4)? (STDERR) [39m[35m    at completeValueWithLocatedError (/root/apollo-demo/node_modules/graphql/execution/execute.js:500:24)[39m
+[34mW20161018-16:59:41.751(-4)? (STDERR) [39m[35m    at completeValueCatchingError (/root/apollo-demo/node_modules/graphql/execution/execute.js:474:21)[39m
+[34mW20161018-16:59:41.752(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:447:10)[39m
+[34mW20161018-16:59:41.752(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-16:59:41.752(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-16:59:41.753(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-16:59:41.753(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-16:59:41.753(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-16:59:41.754(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-16:59:41.754(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-16:59:41.755(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-16:59:41.755(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mI20161018-16:59:44.911(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mW20161018-16:59:44.943(-4)? (STDERR) [39m[35mGraphQLError: ER_NO_SUCH_TABLE: Table 'apollodemo.posts' doesn't exist[39m
+[34mW20161018-16:59:44.943(-4)? (STDERR) [39m[35m    at [object Object].Query.formatError (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:175:14)[39m
+[34mW20161018-16:59:44.945(-4)? (STDERR) [39m[35m    at Query._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:49:21)[39m
+[34mW20161018-16:59:44.945(-4)? (STDERR) [39m[35m    at Query.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-16:59:44.945(-4)? (STDERR) [39m[35m    at Query.ErrorPacket (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Query.js:94:8)[39m
+[34mW20161018-16:59:44.945(-4)? (STDERR) [39m[35m    at Protocol._parsePacket (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:280:23)[39m
+[34mW20161018-16:59:44.946(-4)? (STDERR) [39m[35m    at Parser.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Parser.js:74:12)[39m
+[34mW20161018-16:59:44.946(-4)? (STDERR) [39m[35m    at Protocol.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20161018-16:59:44.947(-4)? (STDERR) [39m[35m    at Socket.<anonymous> (/root/apollo-demo/node_modules/mysql/lib/Connection.js:109:28)[39m
+[34mW20161018-16:59:44.948(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-16:59:44.949(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-16:59:44.949(-4)? (STDERR) [39m[35m    at readableAddChunk (_stream_readable.js:153:18)[39m
+[34mW20161018-16:59:44.951(-4)? (STDERR) [39m[35m    at Socket.Readable.push (_stream_readable.js:111:10)[39m
+[34mW20161018-16:59:44.952(-4)? (STDERR) [39m[35m    at TCP.onread (net.js:536:20)[39m
+[34mW20161018-16:59:44.952(-4)? (STDERR) [39m[35m    at [object Object].Query.run (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:39:17)[39m
+[34mW20161018-16:59:44.953(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:849:20[39m
+[34mW20161018-16:59:44.953(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/retry-as-promised/index.js:40:21[39m
+[34mW20161018-16:59:44.953(-4)? (STDERR) [39m[35m    at retryAsPromised (/root/apollo-demo/node_modules/retry-as-promised/index.js:30:10)[39m
+[34mW20161018-16:59:44.954(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:848:12[39m
+[34mW20161018-16:59:44.954(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:59:44.955(-4)? (STDERR) [39m[35m    at [object Object].Model.findAll (/root/apollo-demo/node_modules/sequelize/lib/model.js:1387:6)[39m
+[34mW20161018-16:59:44.955(-4)? (STDERR) [39m[35m    at posts (imports/api/resolvers.js:7:16)[39m
+[34mW20161018-16:59:44.956(-4)? (STDERR) [39m[35m    at resolveOrError (/root/apollo-demo/node_modules/graphql/execution/execute.js:454:12)[39m
+[34mW20161018-16:59:44.956(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:445:16)[39m
+[34mW20161018-16:59:44.956(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-16:59:44.957(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-16:59:44.957(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-16:59:44.957(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-16:59:44.957(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-16:59:44.959(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-16:59:44.959(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-16:59:44.959(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-16:59:44.960(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mW20161018-16:59:44.960(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:59:44.960(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-16:59:44.961(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-16:59:44.961(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-16:59:44.962(-4)? (STDERR) [39m[35m    at completeValueWithLocatedError (/root/apollo-demo/node_modules/graphql/execution/execute.js:500:24)[39m
+[34mW20161018-16:59:44.962(-4)? (STDERR) [39m[35m    at completeValueCatchingError (/root/apollo-demo/node_modules/graphql/execution/execute.js:474:21)[39m
+[34mW20161018-16:59:44.962(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:447:10)[39m
+[34mW20161018-16:59:44.963(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-16:59:44.964(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-16:59:44.964(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-16:59:44.964(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-16:59:44.965(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-16:59:44.965(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-16:59:44.965(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-16:59:44.966(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-16:59:44.967(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mI20161018-17:03:10.979(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mW20161018-17:03:11.005(-4)? (STDERR) [39m[35mGraphQLError: ER_NO_SUCH_TABLE: Table 'apollodemo.posts' doesn't exist[39m
+[34mW20161018-17:03:11.005(-4)? (STDERR) [39m[35m    at [object Object].Query.formatError (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:175:14)[39m
+[34mW20161018-17:03:11.006(-4)? (STDERR) [39m[35m    at Query._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:49:21)[39m
+[34mW20161018-17:03:11.006(-4)? (STDERR) [39m[35m    at Query.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-17:03:11.007(-4)? (STDERR) [39m[35m    at Query.ErrorPacket (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Query.js:94:8)[39m
+[34mW20161018-17:03:11.009(-4)? (STDERR) [39m[35m    at Protocol._parsePacket (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:280:23)[39m
+[34mW20161018-17:03:11.009(-4)? (STDERR) [39m[35m    at Parser.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Parser.js:74:12)[39m
+[34mW20161018-17:03:11.011(-4)? (STDERR) [39m[35m    at Protocol.write (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20161018-17:03:11.012(-4)? (STDERR) [39m[35m    at Socket.<anonymous> (/root/apollo-demo/node_modules/mysql/lib/Connection.js:109:28)[39m
+[34mW20161018-17:03:11.013(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-17:03:11.013(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-17:03:11.013(-4)? (STDERR) [39m[35m    at readableAddChunk (_stream_readable.js:153:18)[39m
+[34mW20161018-17:03:11.014(-4)? (STDERR) [39m[35m    at Socket.Readable.push (_stream_readable.js:111:10)[39m
+[34mW20161018-17:03:11.014(-4)? (STDERR) [39m[35m    at TCP.onread (net.js:536:20)[39m
+[34mW20161018-17:03:11.014(-4)? (STDERR) [39m[35m    at [object Object].Query.run (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/query.js:39:17)[39m
+[34mW20161018-17:03:11.016(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:849:20[39m
+[34mW20161018-17:03:11.016(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/retry-as-promised/index.js:40:21[39m
+[34mW20161018-17:03:11.018(-4)? (STDERR) [39m[35m    at retryAsPromised (/root/apollo-demo/node_modules/retry-as-promised/index.js:30:10)[39m
+[34mW20161018-17:03:11.018(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:848:12[39m
+[34mW20161018-17:03:11.018(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:03:11.019(-4)? (STDERR) [39m[35m    at [object Object].Model.findAll (/root/apollo-demo/node_modules/sequelize/lib/model.js:1387:6)[39m
+[34mW20161018-17:03:11.020(-4)? (STDERR) [39m[35m    at posts (imports/api/resolvers.js:7:16)[39m
+[34mW20161018-17:03:11.035(-4)? (STDERR) [39m[35m    at resolveOrError (/root/apollo-demo/node_modules/graphql/execution/execute.js:454:12)[39m
+[34mW20161018-17:03:11.036(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:445:16)[39m
+[34mW20161018-17:03:11.036(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-17:03:11.037(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-17:03:11.037(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-17:03:11.038(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-17:03:11.038(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-17:03:11.038(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-17:03:11.039(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-17:03:11.040(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-17:03:11.041(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mW20161018-17:03:11.041(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:03:11.042(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-17:03:11.042(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:03:11.043(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:03:11.043(-4)? (STDERR) [39m[35m    at completeValueWithLocatedError (/root/apollo-demo/node_modules/graphql/execution/execute.js:500:24)[39m
+[34mW20161018-17:03:11.044(-4)? (STDERR) [39m[35m    at completeValueCatchingError (/root/apollo-demo/node_modules/graphql/execution/execute.js:474:21)[39m
+[34mW20161018-17:03:11.044(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:447:10)[39m
+[34mW20161018-17:03:11.044(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-17:03:11.045(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-17:03:11.045(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-17:03:11.045(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-17:03:11.045(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-17:03:11.047(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-17:03:11.047(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-17:03:11.047(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-17:03:11.047(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+=> Server modified -- restarting...
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+                                   [34mW20161018-17:05:48.715(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:05:48.717(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:05:48.717(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:05:48.718(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:05:48.718(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:05:48.720(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:05:49.727(-4)? (STDERR) [39m[35mUnhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 169.54.28.42:3306[39m
+[34mW20161018-17:05:49.727(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:79:20)[39m
+[34mW20161018-17:05:49.728(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-17:05:49.728(-4)? (STDERR) [39m[35m    at Protocol.handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:364:14)[39m
+[34mW20161018-17:05:49.728(-4)? (STDERR) [39m[35m    at Connection._handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/Connection.js:434:18)[39m
+[34mW20161018-17:05:49.729(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-17:05:49.730(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-17:05:49.732(-4)? (STDERR) [39m[35m    at emitErrorNT (net.js:1269:8)[39m
+[34mW20161018-17:05:49.732(-4)? (STDERR) [39m[35m    at nextTickCallbackWith2Args (node.js:442:9)[39m
+[34mW20161018-17:05:49.733(-4)? (STDERR) [39m[35m    at process._tickCallback (node.js:356:17)[39m
+[34mW20161018-17:05:49.733(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:05:49.734(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-17:05:49.735(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-17:05:49.735(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:05:49.737(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:05:49.738(-4)? (STDERR) [39m[35m    at [object Object].Model.sync (/root/apollo-demo/node_modules/sequelize/lib/model.js:985:6)[39m
+[34mW20161018-17:05:49.739(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1014:20[39m
+[34mW20161018-17:05:49.739(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:05:49.741(-4)? (STDERR) [39m[35m    at Function.each (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:05:49.741(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1013:20[39m
+[34mW20161018-17:05:49.741(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-17:05:49.744(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:05:49.744(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:05:49.745(-4)? (STDERR) [39m[35m    at [object Object].Sequelize.sync (/root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1000:6)[39m
+[34mW20161018-17:05:49.746(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.connectors.js (imports/api/connectors.js:18:4)[39m
+[34mW20161018-17:05:49.747(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:05:49.747(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:05:49.749(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:05:49.749(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-17:05:49.749(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:05:49.750(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:05:49.750(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:05:49.752(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-17:05:49.753(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:05:49.753(-4)? (STDERR) [39m[35m    at require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:05:49.754(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/app/app.js:103:1[39m
+[34mW20161018-17:05:49.754(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:292:10[39m
+[34mW20161018-17:05:49.754(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20161018-17:05:49.757(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20161018-17:05:49.758(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:128:5[39m
+=> Meteor server restarted
+=> Server modified -- restarting...
+Unable to resolve some modules:
+
+  "connectors" in /root/apollo-demo/imports/api/resolvers.js (os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save connectors
+
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "connectors" in /root/apollo-demo/imports/api/resolvers.js (os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save connectors
+
+[34mW20161018-17:07:45.654(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:07:45.801(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:07:45.802(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:07:45.804(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:07:45.805(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:07:45.806(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:07:46.123(-4)? (STDERR) [39m[35m/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:280[39m
+[34mW20161018-17:07:46.124(-4)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20161018-17:07:46.125(-4)? (STDERR) [39m[35m						^[39m
+[34mW20161018-17:07:46.125(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:07:46.126(-4)? (STDERR) [39m[35mError: Can't find npm module 'connectors'. Did you forget to call 'Npm.depends' in package.js within the 'modules-runtime' package?[39m
+[34mW20161018-17:07:46.126(-4)? (STDERR) [39m[35m    at Object.Npm.require (/root/apollo-demo/.meteor/local/build/programs/server/boot.js:198:17)[39m
+[34mW20161018-17:07:46.127(-4)? (STDERR) [39m[35m    at options.fallback (packages/modules-runtime/modules-runtime.js:21:1)[39m
+[34mW20161018-17:07:46.128(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:88:1)[39m
+[34mW20161018-17:07:46.129(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:07:46.129(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-17:07:46.129(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:07:46.130(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:07:46.130(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:07:46.131(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-17:07:46.131(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+=> Exited with code: 1
+
+Unable to resolve some modules:
+
+  "connectors" in /root/apollo-demo/imports/api/resolvers.js (os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save connectors
+
+[34mW20161018-17:07:58.733(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:07:58.734(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:07:58.735(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:07:58.735(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:07:58.736(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:07:58.736(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:07:59.129(-4)? (STDERR) [39m[35m/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:280[39m
+[34mW20161018-17:07:59.130(-4)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20161018-17:07:59.132(-4)? (STDERR) [39m[35m						^[39m
+[34mW20161018-17:07:59.132(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:07:59.133(-4)? (STDERR) [39m[35mError: Can't find npm module 'connectors'. Did you forget to call 'Npm.depends' in package.js within the 'modules-runtime' package?[39m
+[34mW20161018-17:07:59.133(-4)? (STDERR) [39m[35m    at Object.Npm.require (/root/apollo-demo/.meteor/local/build/programs/server/boot.js:198:17)[39m
+[34mW20161018-17:07:59.137(-4)? (STDERR) [39m[35m    at options.fallback (packages/modules-runtime/modules-runtime.js:21:1)[39m
+[34mW20161018-17:07:59.140(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:88:1)[39m
+[34mW20161018-17:07:59.140(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:07:59.140(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-17:07:59.140(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:07:59.141(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:07:59.143(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:07:59.144(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-17:07:59.144(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+=> Exited with code: 1
+
+Unable to resolve some modules:
+
+  "connectors" in /root/apollo-demo/imports/api/resolvers.js (os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save connectors
+
+[34mW20161018-17:08:08.714(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:08:08.715(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:08:08.716(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:08:08.716(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:08:08.716(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:08:08.716(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:08:09.148(-4)? (STDERR) [39m[35m/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:280[39m
+[34mW20161018-17:08:09.151(-4)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20161018-17:08:09.151(-4)? (STDERR) [39m[35m						^[39m
+[34mW20161018-17:08:09.152(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:08:09.152(-4)? (STDERR) [39m[35mError: Can't find npm module 'connectors'. Did you forget to call 'Npm.depends' in package.js within the 'modules-runtime' package?[39m
+[34mW20161018-17:08:09.155(-4)? (STDERR) [39m[35m    at Object.Npm.require (/root/apollo-demo/.meteor/local/build/programs/server/boot.js:198:17)[39m
+[34mW20161018-17:08:09.155(-4)? (STDERR) [39m[35m    at options.fallback (packages/modules-runtime/modules-runtime.js:21:1)[39m
+[34mW20161018-17:08:09.156(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:88:1)[39m
+[34mW20161018-17:08:09.159(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:08:09.159(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-17:08:09.160(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:08:09.161(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:08:09.162(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:08:09.162(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-17:08:09.164(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+=> Exited with code: 1
+=> Your application is crashing. Waiting for file change.
+=> Modified -- restarting.
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[34mW20161018-17:12:10.839(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:12:11.011(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:12:11.015(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:12:11.016(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:12:11.019(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:12:11.019(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:12:12.697(-4)? (STDERR) [39m[35mUnhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 169.54.28.42:3306[39m
+[34mW20161018-17:12:12.699(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:79:20)[39m
+[34mW20161018-17:12:12.700(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-17:12:12.702(-4)? (STDERR) [39m[35m    at Protocol.handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:364:14)[39m
+[34mW20161018-17:12:12.702(-4)? (STDERR) [39m[35m    at Connection._handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/Connection.js:434:18)[39m
+[34mW20161018-17:12:12.703(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-17:12:12.705(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-17:12:12.705(-4)? (STDERR) [39m[35m    at emitErrorNT (net.js:1269:8)[39m
+[34mW20161018-17:12:12.707(-4)? (STDERR) [39m[35m    at nextTickCallbackWith2Args (node.js:442:9)[39m
+[34mW20161018-17:12:12.708(-4)? (STDERR) [39m[35m    at process._tickCallback (node.js:356:17)[39m
+[34mW20161018-17:12:12.708(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:12:12.709(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-17:12:12.709(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-17:12:12.709(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:12:12.711(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:12:12.711(-4)? (STDERR) [39m[35m    at [object Object].Model.sync (/root/apollo-demo/node_modules/sequelize/lib/model.js:985:6)[39m
+[34mW20161018-17:12:12.711(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1014:20[39m
+[34mW20161018-17:12:12.712(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:12:12.715(-4)? (STDERR) [39m[35m    at Function.each (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:12:12.715(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1013:20[39m
+[34mW20161018-17:12:12.717(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-17:12:12.718(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:12:12.718(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:12:12.719(-4)? (STDERR) [39m[35m    at [object Object].Sequelize.sync (/root/apollo-demo/node_modules/sequelize/lib/sequelize.js:1000:6)[39m
+[34mW20161018-17:12:12.719(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.connectors.js (imports/api/connectors.js:18:4)[39m
+[34mW20161018-17:12:12.721(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:12:12.724(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:12:12.725(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:12:12.726(-4)? (STDERR) [39m[35m    at meteorInstall.imports.api.resolvers.js (imports/api/resolvers.js:1:22)[39m
+[34mW20161018-17:12:12.726(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:12:12.726(-4)? (STDERR) [39m[35m    at Module.require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:12:12.727(-4)? (STDERR) [39m[35m    at Module.Mp.import (/root/.meteor/packages/modules/.0.7.6_1.jwdxqd++os+web.browser+web.cordova/npm/node_modules/reify/lib/runtime.js:70:16)[39m
+[34mW20161018-17:12:12.729(-4)? (STDERR) [39m[35m    at meteorInstall.server.server.js (server/server.js:1:1)[39m
+[34mW20161018-17:12:12.730(-4)? (STDERR) [39m[35m    at fileEvaluate (packages/modules-runtime/.npm/package/node_modules/install/install.js:153:1)[39m
+[34mW20161018-17:12:12.730(-4)? (STDERR) [39m[35m    at require (packages/modules-runtime/.npm/package/node_modules/install/install.js:82:1)[39m
+[34mW20161018-17:12:12.732(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/app/app.js:103:1[39m
+[34mW20161018-17:12:12.732(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:292:10[39m
+[34mW20161018-17:12:12.732(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20161018-17:12:12.735(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/server-lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20161018-17:12:12.735(-4)? (STDERR) [39m[35m    at /root/apollo-demo/.meteor/local/build/programs/server/boot.js:128:5[39m
+=> Started your app.
+
+=> App running at: http://169.54.28.42:3000
+[34mW20161018-17:13:56.995(-4)? (STDERR) [39m[35mGraphQLError: connect ECONNREFUSED 169.54.28.42:3306[39m
+[34mW20161018-17:13:56.998(-4)? (STDERR) [39m[35m    at Handshake._callback (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:79:20)[39m
+[34mW20161018-17:13:56.998(-4)? (STDERR) [39m[35m    at Handshake.Sequence.end (/root/apollo-demo/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)[39m
+[34mW20161018-17:13:57.002(-4)? (STDERR) [39m[35m    at Protocol.handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/protocol/Protocol.js:364:14)[39m
+[34mW20161018-17:13:57.004(-4)? (STDERR) [39m[35m    at Connection._handleNetworkError (/root/apollo-demo/node_modules/mysql/lib/Connection.js:434:18)[39m
+[34mW20161018-17:13:57.004(-4)? (STDERR) [39m[35m    at emitOne (events.js:77:13)[39m
+[34mW20161018-17:13:57.004(-4)? (STDERR) [39m[35m    at Socket.emit (events.js:169:7)[39m
+[34mW20161018-17:13:57.007(-4)? (STDERR) [39m[35m    at emitErrorNT (net.js:1269:8)[39m
+[34mW20161018-17:13:57.008(-4)? (STDERR) [39m[35m    at nextTickCallbackWith2Args (node.js:442:9)[39m
+[34mW20161018-17:13:57.008(-4)? (STDERR) [39m[35m    at process._tickCallback (node.js:356:17)[39m
+[34mW20161018-17:13:57.009(-4)? (STDERR) [39m[35m    at [object Object].ConnectionManager.connect (/root/apollo-demo/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:55:10)[39m
+[34mW20161018-17:13:57.010(-4)? (STDERR) [39m[35m    at [object Object].<anonymous> (/root/apollo-demo/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:247:43)[39m
+[34mW20161018-17:13:57.012(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:13:57.012(-4)? (STDERR) [39m[35m    at [object Object].Model.findAll (/root/apollo-demo/node_modules/sequelize/lib/model.js:1387:6)[39m
+[34mW20161018-17:13:57.012(-4)? (STDERR) [39m[35m    at posts (imports/api/resolvers.js:7:16)[39m
+[34mW20161018-17:13:57.013(-4)? (STDERR) [39m[35m    at resolveOrError (/root/apollo-demo/node_modules/graphql/execution/execute.js:454:12)[39m
+[34mW20161018-17:13:57.013(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:445:16)[39m
+[34mW20161018-17:13:57.016(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-17:13:57.016(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-17:13:57.017(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-17:13:57.019(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-17:13:57.020(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-17:13:57.020(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-17:13:57.021(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-17:13:57.021(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-17:13:57.022(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+[34mW20161018-17:13:57.023(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:13:57.023(-4)? (STDERR) [39m[35m    at processImmediate [as _immediateCallback] (timers.js:383:17)[39m
+[34mW20161018-17:13:57.024(-4)? (STDERR) [39m[35mFrom previous event:[39m
+[34mW20161018-17:13:57.024(-4)? (STDERR) [39m[35m    at Promise.then (/root/apollo-demo/node_modules/sequelize/lib/promise.js:21:17)[39m
+[34mW20161018-17:13:57.024(-4)? (STDERR) [39m[35m    at completeValueWithLocatedError (/root/apollo-demo/node_modules/graphql/execution/execute.js:500:24)[39m
+[34mW20161018-17:13:57.025(-4)? (STDERR) [39m[35m    at completeValueCatchingError (/root/apollo-demo/node_modules/graphql/execution/execute.js:474:21)[39m
+[34mW20161018-17:13:57.025(-4)? (STDERR) [39m[35m    at resolveField (/root/apollo-demo/node_modules/graphql/execution/execute.js:447:10)[39m
+[34mW20161018-17:13:57.026(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:252:18[39m
+[34mW20161018-17:13:57.026(-4)? (STDERR) [39m[35m    at Array.reduce (native)[39m
+[34mW20161018-17:13:57.028(-4)? (STDERR) [39m[35m    at executeFields (/root/apollo-demo/node_modules/graphql/execution/execute.js:249:42)[39m
+[34mW20161018-17:13:57.028(-4)? (STDERR) [39m[35m    at executeOperation (/root/apollo-demo/node_modules/graphql/execution/execute.js:190:10)[39m
+[34mW20161018-17:13:57.028(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/graphql/execution/execute.js:116:13[39m
+[34mW20161018-17:13:57.029(-4)? (STDERR) [39m[35m    at Object.execute (/root/apollo-demo/node_modules/graphql/execution/execute.js:115:10)[39m
+[34mW20161018-17:13:57.029(-4)? (STDERR) [39m[35m    at doRunQuery (/root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:63:26)[39m
+[34mW20161018-17:13:57.030(-4)? (STDERR) [39m[35m    at /root/apollo-demo/node_modules/apollo-server/dist/core/runQuery.js:18:39[39m
+[34mW20161018-17:13:57.030(-4)? (STDERR) [39m[35m    at /root/.meteor/packages/promise/.0.8.7.1n1kxew++os+web.browser+web.cordova/npm/node_modules/meteor-promise/fiber_pool.js:32:39[39m
+=> Server modified -- restarting...
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+                                   [34mW20161018-17:14:24.448(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:14:24.450(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:14:24.450(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:14:24.450(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:14:24.450(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:14:24.451(-4)? (STDERR) [39m[35m[39m
+=> Meteor server restarted
+=> Server modified -- restarting...
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+[34mW20161018-17:16:21.010(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-17:16:21.158(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-17:16:21.160(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-17:16:21.162(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-17:16:21.162(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-17:16:21.162(-4)? (STDERR) [39m[35m[39m
+=> Started your app.
+
+=> App running at: http://169.54.28.42:3000
+[34mI20161018-17:16:52.347(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mI20161018-17:19:29.268(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
