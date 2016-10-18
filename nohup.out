@@ -756,3 +756,108 @@ If you notice problems related to these missing modules, consider running:
 => App running at: http://169.54.28.42:3000
 [34mI20161018-17:16:52.347(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
 [34mI20161018-17:19:29.268(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mI20161018-17:22:26.292(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mI20161018-17:23:39.797(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+[34mI20161018-17:23:49.395(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+=> Server modified -- restarting...                                   [34mI20161018-17:24:13.172(-4)? [39mExecuting (default): SELECT `id`, `content`, `views` FROM `posts` AS `post`;
+/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/isopackets/ddp/npm/node_modules/meteor/promise/node_modules/meteor-promise/promise_server.js:165
+      throw error;
+      ^
+
+Error: app contains non-asset files without plugin? node_modules/terraformer/docs-build/partials/index_partials/arcgis_parser/index.html - index.html
+    at Error (native)
+    at /tools/isobuild/compiler.js:533:15
+    at Array.forEach (native)
+    at /tools/isobuild/compiler.js:489:21
+    at /tools/isobuild/compiler.js:179:28
+    at Object.withCache (/tools/fs/files.js:1585:12)
+    at /tools/isobuild/compiler.js:178:11
+    at Array.forEach (native)
+    at Function._.each._.forEach (/root/.meteor/packages/meteor-tool/.1.4.1_2.354htk++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/underscore/underscore.js:79:11)
+    at Object.compile (/tools/isobuild/compiler.js:173:5)
+    at /tools/isobuild/bundler.js:2624:24
+    at /tools/utils/buildmessage.js:271:13
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:264:29
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:262:18
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:253:23
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at Object.capture (/tools/utils/buildmessage.js:252:19)
+    at bundle (/tools/isobuild/bundler.js:2567:31)
+    at /tools/isobuild/bundler.js:2514:32
+    at Object.withCache (/tools/fs/files.js:1585:12)
+    at Object.exports.bundle (/tools/isobuild/bundler.js:2514:16)
+    at /tools/runners/run-app.js:582:36
+    at Function.run (/tools/tool-env/profile.js:489:12)
+    at bundleApp (/tools/runners/run-app.js:572:34)
+    at AppRunner._runOnce (/tools/runners/run-app.js:625:35)
+    at AppRunner._fiber (/tools/runners/run-app.js:884:28)
+    at /tools/runners/run-app.js:402:12
+[[[[[ ~/apollo-demo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+=> Errors prevented startup:
+   
+   While processing files with static-html (for target web.browser):
+   client/main.html:12: Expected <head> or <body> tag
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+=> Errors prevented startup:
+   
+   While processing files with static-html (for target web.browser):
+   client/main.html:12: Expected <head> or <body> tag
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+=> Errors prevented startup:
+   
+   While processing files with static-html (for target web.browser):
+   client/main.html:12: Expected <head> or <body> tag
+   
+=> Your application has errors. Waiting for file change.
