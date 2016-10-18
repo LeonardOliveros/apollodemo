@@ -930,3 +930,31 @@ If you notice problems related to these missing modules, consider running:
 [34mW20161018-18:52:45.205(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
 [34mW20161018-18:52:45.206(-4)? (STDERR) [39m[35m[39m
 => Meteor server restarted
+=> Server modified -- restarting...
+Unable to resolve some modules:
+
+  "pg-hstore" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/hstore.js
+(os.linux.x86_64)
+  "pg" in
+/root/apollo-demo/node_modules/sequelize/lib/dialects/postgres/connection-manager.js
+(os.linux.x86_64)
+
+If you notice problems related to these missing modules, consider running:
+
+  meteor npm install --save pg-hstore pg
+
+                                   [34mW20161018-18:57:21.925(-4)? (STDERR) [39m[35mWARNING: npm peer requirements (for apollo) not installed:[39m
+[34mW20161018-18:57:21.925(-4)? (STDERR) [39m[35m - graphql-tools@0.7.2 installed, graphql-tools@^0.6.2 needed[39m
+[34mW20161018-18:57:21.926(-4)? (STDERR) [39m[35m[39m
+[34mW20161018-18:57:21.926(-4)? (STDERR) [39m[35mRead more about installing npm peer dependencies:[39m
+[34mW20161018-18:57:21.927(-4)? (STDERR) [39m[35m  http://guide.meteor.com/using-packages.html#peer-npm-dependencies[39m
+[34mW20161018-18:57:21.928(-4)? (STDERR) [39m[35m[39m
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Errors prevented startup:
+   
+   While building for web.browser:
+   imports/ui/App.js:12:3: Unexpected token (12:3)
+   
+=> Your application has errors. Waiting for file change.
